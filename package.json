@@ -1,0 +1,22 @@
+{
+  "name": "lakitravel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "home.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saint-F/LakiTravel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saint-F/LakiTravel/issues"
+  },
+  "homepage": "https://github.com/Saint-F/LakiTravel#readme",
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}

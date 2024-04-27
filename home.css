@@ -1,0 +1,149 @@
+@keyframes move-down {
+    from {
+        margin-top: 10vh;
+    }
+    to {
+        margin-top: 30vh;
+    }
+}
+
+@keyframes flash {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+
+}
+
+@keyframes grow-title {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 10vw;
+    }
+}
+
+@keyframes laki-19-color {
+    0% {color: green}
+    20% {color: purple}
+    40% {color: red}
+    60% {color: #23a6d5}
+    80% {color: yellow}
+    100% {color: blue}
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: Arial;
+    display: grid;
+    height: 100vh;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+}
+
+#europe {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+}
+
+#laki-title {
+    animation-name: grow-title;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+#laki-title-wrapper {
+    display: flex;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
+    font-size: 10vw;
+    color: white;
+}
+
+#laki-19 {
+    animation-name: laki-19-color;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#test {
+    transition: height 1s;
+}
+
+.flash {
+    animation-name: flash;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+
+.positioner {
+    height: 200px;
+    width: 300px;
+    display: grid;
+    margin-top: 10vh;
+    margin-left: 10vw;
+    animation-name: move-down;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.present-Part {
+    border: black solid 2px;
+    position: absolute;
+}
+
+.lid-front-right {
+    width: 120px;
+    height: 32px;
+    transform: skew(-10deg);
+    rotate: -10deg;
+    background: orange;
+    margin-left: 78px;
+    margin-top: 2px;
+}
+
+.lid-front-left {
+
+    width: 80px;
+    height: 30px;
+    transform: skew(20deg);
+    rotate: 20deg;
+    background: orange;
+    justify-self: left;
+
+}
+
+.lid-top {
+    width: 78px;
+    height: 60px;
+    transform: skew(-60deg);
+    rotate: 20deg;
+    background: orange;
+    justify-self: left;
+    margin-top: -43px;
+    margin-left: 61px;
+}

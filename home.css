@@ -40,12 +40,45 @@
         background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 95% 50%;
     }
     100% {
         background-position: 0% 50%;
     }
 }
+
+@keyframes spin-zoom {
+    from {
+        rotate: 0deg;
+        height: 100vh;
+        left: -120%
+    }
+    to {
+        rotate: 360deg;
+        height: 80vh;
+        left: -90%;
+
+    }
+}
+
+@keyframes move-up {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: -200vh;
+    }
+}
+
+@keyframes brighten {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
 
 body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -54,9 +87,41 @@ body {
     font-family: Arial;
     display: grid;
     height: 100vh;
+    width: 100vw;
+}
+
+.move-up {
+    animation-name: move-up;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+#dim {
+    animation-name: brighten;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 120vh;
+    width: 110vw;
+    background-color: black;
+    opacity: 0;
+}
+#anime-zoom {
+    animation: spin-zoom 1s linear infinite;
+    position: absolute;
+    left: -120%;
 }
 
 #video {
+    z-index: 1;
+    position: absolute;
+    display: none;
+    justify-self: center;
+    align-self: center;
     width: 100%;
     height: 100%;
 }
@@ -64,7 +129,7 @@ body {
 #europe {
     position: absolute;
     z-index: -1;
-    height: 100vh;
+    width: 100%;
 }
 
 #laki-title {
@@ -84,14 +149,17 @@ body {
 }
 
 #laki-19 {
+    font-size: 60vw;
+    rotate: 10deg;
+    position: absolute;
+    font-weight: bold;
+    justify-self: center;
+    align-self: center;
     animation-name: laki-19-color;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
 }
 
-#test {
-    transition: height 1s;
-}
 
 .flash {
     animation-name: flash;

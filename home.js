@@ -24,6 +24,34 @@ lakiTitle.addEventListener("animationend", (e) => {
         let laki19Div = document.createElement("div");
         laki19Div.innerHTML = "19";
         laki19Div.id = "laki-19";
-        lakiTitleWrapper.append(laki19Div);
+
+        /*
+        let animeZoom = document.createElement("img");
+        animeZoom.setAttribute("src", "animezoom.png");
+        animeZoom.id = "anime-zoom";
+        body.append(animeZoom);
+        */
+
+
+        body.append(laki19Div);
+
     }, 1000)
+
+    window.setTimeout(() => {
+        let titleWrapper = document.getElementById("laki-title-wrapper")
+        titleWrapper.className = "move-up";
+        document.getElementById("laki-19").remove();
+        let dimmerContainer = document.createElement("div");
+        dimmerContainer.id = "dim";
+
+        titleWrapper.addEventListener("animationend", () => {
+            body.append(dimmerContainer)
+            window.setTimeout(() => {
+                let video = document.getElementById("video");
+                document.getElementById("video").style.display = "block";
+                body.click();
+                video.play();
+            }, 5000)
+        });
+    }, 3000)
 });
